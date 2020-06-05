@@ -15,9 +15,11 @@ function operaciones(op)
 
         restar: function restarNumeros(n1, n2) {
             return (parseInt(n1) - parseInt(n2));
+        },
+        
+        multiplicar: function multiplicarNumeros(n1, n2) {
+            return (parseInt(n1) * parseInt(n2));
         }
-       
-
 
     };
 
@@ -47,7 +49,12 @@ function operaciones(op)
             case 'restar':
                 var resultado = ops.restar(num1, num2);
                 alert (resultado);
-                break;            
+                break;
+            case 'multiplicar':
+                var resultado = ops.multiplicar(num1, num2);
+                alert(resultado);
+                break;
+            
         }
     }
 
@@ -57,8 +64,7 @@ function operaciones(op)
 </head>
 
 <body>
-<h1>Script de Alberto Maneiros Eizaguirre</h1> 
-
+<h1> Script de Alberto Maneiros Eizaguirre </h1>
 <h1>Operations de Francisco J. Hernández</h1>
 
 <form>
@@ -67,7 +73,7 @@ function operaciones(op)
     <br /><br />
     <input type="button" value="SUMAR" onclick="operaciones('sumar'); return false;" /><br />
     <input type="button" value="RESTAR" onclick="operaciones('restar'); return false;" /><br />
-    
+    <input type="button" value="MULTIPLICAR" onclick="operaciones('multiplicar'); return false;" /><br />    
 </form>
 
 </body>
